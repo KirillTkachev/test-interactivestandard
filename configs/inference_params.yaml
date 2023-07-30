@@ -1,0 +1,24 @@
+metric_path: "models/metrics.json"
+ground_truth_path: "data/processed/clusters_cleaned.csv"
+embedding_params:
+    input_data_path: "data/processed/cleaned_clusters/"
+    output_path: "models/embeddings.npy"
+    clip_model: "openai/clip-vit-large-patch14-336"
+    device: "cpu"
+    allowed_extensions: 
+        - ".jpg"
+        - ".jpeg"
+        - ".png"
+    batch_size: 32
+    rebuild_embeddings: true
+clustering_params:
+    embeddings_path: "models/embeddings.npy"
+    annoy_index_metric: "angular"
+    annoy_index_trees: 100
+    linkage_method: "complete"
+    fcluster_criterion: "distance"
+    fcluster_threshold: 0.62
+result_params:
+    input_path: "data/processed/cleaned_clusters"
+    output_path: "results/clustered_images"
+
