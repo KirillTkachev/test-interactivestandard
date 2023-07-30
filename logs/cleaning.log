@@ -1,2 +1,0 @@
-2023-07-30 14:42:00,084 [INFO] Start dataset cleaning with params: DatasetParams(raw_csv='data/raw/test-task/clusters.csv', cleaned_csv='data/processed/clusters_cleaned.csv', raw_images='data/raw/test-task/clusters/', cleaned_images='data/processed/cleaned_clusters/', width_to_remove=1920, height_to_remove=1080)
-2023-07-30 14:42:32,543 [INFO] The size of cleaned dataset: (557, 2)
